@@ -28,11 +28,17 @@ body {
     align-items: center;
 }
 
+h5 {
+    text-align: center;
+    font-weight: bold;
+}
+
 #taskbarDateTime {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 11px;
+    margin: 50px 0px;
 }
 
 #taskbarDateTime input {
@@ -95,10 +101,4 @@ body {
 #options {
     display: flex;
     gap: 100px;
-    margin-top: 50px;
-}
-
-#options h5 {
-    text-align: center;
-    font-weight: bold;
 }
