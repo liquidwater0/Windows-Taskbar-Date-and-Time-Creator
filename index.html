@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="Styles/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Taskbar Date and Time Creator</title>
+    </head>
+    <body>
+        <div id="main">
+            <div data-theme="dark" data-os="win10" data-size="normal" id="taskbarDateTime">
+                <div>
+                    <input type="text" value="12:00 AM">
+                    <input type="text" value="1/1/2000">
+                </div>
+            </div>
+
+            <div id="options">
+                <div>
+                    <h5>Theme</h5>
+                    <div><label for="darkMode"><input class="with-gap" type="radio" name="theme" id="darkMode" checked><span>Dark</span></label></div>
+                    <div><label for="lightMode"><input class="with-gap" type="radio" name="theme" id="lightMode"><span>Light</span></label></div>
+                </div>
+
+                <div>
+                    <h5>OS</h5>
+                    <div><label for="win10"><input class="with-gap" type="radio" name="os" id="win10" checked><span>Windows 10</span></label></div>
+                    <div><label for="win11"><input class="with-gap" type="radio" name="os" id="win11"><span>Windows 11</span></label></div>
+                </div>
+
+                <div>
+                    <h5>Size</h5>
+                    <div><label for="smallSize"><input class="with-gap" type="radio" name="size" id="smallSize" checked><span>Normal</span></label></div>
+                    <div><label for="bigSize"><input class="with-gap" type="radio" name="size" id="bigSize"><span>Big</span></label></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="Scripts/materialize.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
