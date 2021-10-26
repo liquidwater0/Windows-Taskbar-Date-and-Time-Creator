@@ -56,6 +56,27 @@ h5 {
     color: rgb(26, 26, 26);
 }
 
+[data-theme="custom"] {
+    background-color: var(--customBackColor);
+    color: var(--customTextColor);
+}
+
+#customColors {
+    display: none;
+}
+
+#customColors .colorInput {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+#customColors .colorInput label {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
 [data-os="win10"] {
     font-family: 'Segoe UI', sans-serif;
     width: 64px;
