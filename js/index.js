@@ -6,7 +6,6 @@ const lightRadio = document.getElementById("lightMode");
 const customRadio = document.getElementById("custom");
 
 const customColorsDiv = document.getElementById("customColors");
-const colorInputs = document.querySelectorAll("input[type='color']");
 const textColorInput = document.getElementById("textColorInput");
 const backgroundColorInput = document.getElementById("backColorInput");
 
