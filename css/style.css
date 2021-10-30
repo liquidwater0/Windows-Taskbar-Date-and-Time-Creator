@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: hidden;
+}
+
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-color: rgb(50, 50, 50);
-    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 [type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:before,
@@ -22,15 +24,29 @@ body {
   background-color: rgb(0, 160, 255) !important;
 }
 
-#main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+[type="radio"] + span {
+    font-weight: bold !important;
+    font-size: 18px !important;
 }
 
-h5 {
-    text-align: center;
+[type="radio"]:not(#custom) + span {
+    width: 500px;
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+#top h4 {
+    position: absolute;
+    top: 100px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 #taskbarDateTime {
@@ -38,12 +54,76 @@ h5 {
     justify-content: center;
     align-items: center;
     font-size: 11px;
-    margin: 50px 0px;
 }
 
 #taskbarDateTime input {
     all: unset;
     width: 100%;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-around;
+    height: 240px;
+    background-color: rgb(65, 65, 65);
+    color:white;
+}
+
+#bottom > div {
+    width: 6%;
+}
+
+#bottom h5 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px 0px;
+}
+
+#customDiv,
+#customColors {
+    gap: 15px;
+}
+
+#customDiv {
+    display: flex;
+}
+
+#customColors {
+    display: none;
+}
+
+#customColors .colorInput {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#customColors .colorInput label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 113px;
+}
+
+#customColors .colorInput input[type="color"] {
+    width: 94px;
+    height: 34px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+#customColors .colorInput input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0px;   
+}
+
+#customColors .colorInput input[type="color"]::-webkit-color-swatch {
+    border: 4px solid white;  
+    border-radius: 10px;    
 }
 
 [data-theme="dark"] {
@@ -59,22 +139,6 @@ h5 {
 [data-theme="custom"] {
     background-color: var(--customBackColor);
     color: var(--customTextColor);
-}
-
-#customColors {
-    display: none;
-}
-
-#customColors .colorInput {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px;
-}
-
-#customColors .colorInput label {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 8px;
 }
 
 [data-os="win10"] {
@@ -119,7 +183,29 @@ h5 {
     transform: scale(2);
 }
 
-#options {
-    display: flex;
-    gap: 100px;
+@media (max-width: 1200px) {
+    #customDiv {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #customColors {
+        gap: 15px;
+    }
+}
+
+@media (max-height: 700px) {
+    #top h4 {
+        top: 10px;
+    }
+}
+
+@media (max-height: 420px) {
+    #top {
+        flex-direction: column;
+    }
+
+    #top h4 {
+        position: static;
+    }
 }
