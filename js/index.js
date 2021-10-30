@@ -24,7 +24,7 @@ function update() {
         taskbarDateTime.setAttribute("data-theme", "light");
     } else {
         taskbarDateTime.setAttribute("data-theme", "custom");
-        customColorsDiv.style.display = "block";
+        customColorsDiv.style.display = "flex";
         document.documentElement.style.setProperty("--customTextColor", textColorInput.value);
         document.documentElement.style.setProperty("--customBackColor", backgroundColorInput.value);
     }
