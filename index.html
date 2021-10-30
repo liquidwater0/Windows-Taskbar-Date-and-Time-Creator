@@ -13,22 +13,27 @@
         <title>Taskbar Date and Time Creator</title>
     </head>
     <body>
-        <div id="main">
-            <h5>Click the text to edit</h5>
-
+        <div id="top">
+            <h4>Click the text to edit</h4>
+            
             <div data-theme="dark" data-os="win10" data-size="normal" id="taskbarDateTime">
                 <div>
                     <input type="text" value="12:00 AM">
                     <input type="text" value="1/1/2000">
                 </div>
             </div>
+        </div>
 
-            <div id="options">
-                <div>
-                    <h5>Theme</h5>
-                    <div><label for="darkMode"><input class="with-gap" type="radio" name="theme" id="darkMode" checked><span>Dark</span></label></div>
-                    <div><label for="lightMode"><input class="with-gap" type="radio" name="theme" id="lightMode"><span>Light</span></label></div>
+        <div class="z-depth-3" id="bottom">
+            <div>
+                <h5>Theme</h5>
+
+                <div><label for="darkMode"><input class="with-gap" type="radio" name="theme" id="darkMode" checked><span>Dark</span></label></div>
+                <div><label for="lightMode"><input class="with-gap" type="radio" name="theme" id="lightMode"><span>Light</span></label></div>
+                
+                <div id="customDiv">
                     <div><label for="custom"><input class="with-gap" type="radio" name="theme" id="custom"><span>Custom</span></label></div>
+
                     <div id="customColors">
                         <div class="colorInput">
                             <label for="textColorInput">Text Color</label>
@@ -40,18 +45,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div>
-                    <h5>OS</h5>
-                    <div><label for="win10"><input class="with-gap" type="radio" name="os" id="win10" checked><span>Windows 10</span></label></div>
-                    <div><label for="win11"><input class="with-gap" type="radio" name="os" id="win11"><span>Windows 11</span></label></div>
-                </div>
+            <div>
+                <h5>OS</h5>
 
-                <div>
-                    <h5>Size</h5>
-                    <div><label for="smallSize"><input class="with-gap" type="radio" name="size" id="smallSize" checked><span>Normal</span></label></div>
-                    <div><label for="bigSize"><input class="with-gap" type="radio" name="size" id="bigSize"><span>Big</span></label></div>
-                </div>
+                <div><label for="win10"><input class="with-gap" type="radio" name="os" id="win10" checked><span>Windows 10</span></label></div>
+                <div><label for="win11"><input class="with-gap" type="radio" name="os" id="win11"><span>Windows 11</span></label></div>
+            </div>
+
+            <div>
+                <h5>Size</h5>
+
+                <div><label for="smallSize"><input class="with-gap" type="radio" name="size" id="smallSize" checked><span>Normal</span></label></div>
+                <div><label for="bigSize"><input class="with-gap" type="radio" name="size" id="bigSize"><span>Big</span></label></div>
             </div>
         </div>
 
