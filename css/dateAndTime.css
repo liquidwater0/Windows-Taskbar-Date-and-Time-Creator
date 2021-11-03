@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-size: 11px;
+    overflow: hidden;
 }
 
 #taskbarDateTime input {
@@ -47,8 +49,8 @@
     text-align: right;
 }
 
-[data-os="win11"] > div {
-    margin-right: 20px;
+[data-os="win11"] input {
+    margin-right: 40px !important; /* 20px but I have to double it for some reason???*/
 }
 
 [data-os="win11"] input:first-child {
