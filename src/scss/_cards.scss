@@ -1,0 +1,41 @@
+.theme-card-wrapper {
+    position: relative;
+}
+
+.card {
+    .card-label {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0.65em 1em;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0.65rem;
+        padding: 1.5rem;
+    }
+
+    &.custom-colors-card {
+        position: absolute;
+        bottom: 100%;
+
+        .card-body {
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .custom-colors-card {
+        width: 100%;
+        bottom: 75% !important;
+
+        .card-body {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+}

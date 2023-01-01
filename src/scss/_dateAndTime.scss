@@ -1,0 +1,70 @@
+.date-and-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 11px;
+    overflow: hidden;
+
+    input {
+        all: unset;
+        width: 100%;
+    }
+
+    &[data-theme="dark"] {
+        background-color: rgb(32, 32, 32);
+        color: white;
+    }
+    
+    &[data-theme="light"] {
+        background-color: rgb(243, 243, 243);
+        color: rgb(26, 26, 26);
+    }
+    
+    &[data-theme="custom"] {
+        background-color: var(--custom-background-color);
+        color: var(--custom-text-color);
+    }
+    
+    &[data-os="windows10"] {
+        font-family: 'Segoe UI', sans-serif;
+        width: 64px;
+        height: 40px;
+        text-align: center;
+
+        input:first-child {
+            margin-top: 6px;
+        }
+
+        input:last-child {
+            margin-bottom: 7px;
+        }
+    }
+
+    &[data-os="windows11"] {
+        font-family: 'Segoe UI Variable Text', 'Segoe UI', sans-serif;
+        width: 97px;
+        height: 48px;
+        text-align: right;
+
+        input {
+            margin-right: 40px !important; /* 20px but I have to double it for some reason???*/
+        }
+
+        input:first-child {
+            margin-top: 12px;
+        }
+
+        input:last-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    &[data-size="normal"] {
+        scale: 1;
+    }
+    
+    &[data-size="big"] {
+        scale: 2;
+    }
+}
